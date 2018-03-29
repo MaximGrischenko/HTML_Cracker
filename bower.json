@@ -1,0 +1,23 @@
+{
+  "name": "spongedigital",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "imax.paradox"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "^3.3.1"
+  },
+  "dependencies": {
+    "jquery-ui": "^1.12.1"
+  }
+}

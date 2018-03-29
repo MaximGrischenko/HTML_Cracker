@@ -1,0 +1,107 @@
+#top-header {
+  .row-flex();
+  justify-content: space-between;
+  min-height: 60px;
+
+  .logotype {
+    .col();
+    .size(2);
+    .size-sm(12);
+    position: relative;
+    z-index: 2;
+
+    h3 {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      color: @main-logo-color;
+      font-family: Kristi, sans-serif;
+      font-size: 3.75em;
+      line-height: 60.96px;
+
+      .sm-block({
+        position: relative;
+        top: 0;
+        text-align: center;
+      });
+
+      span {
+        position: relative;
+        left: -15px;
+        top: 20px;
+        color: @main-logo-color;
+        font-family: LatoRegular, sans-serif;
+        font-size: 18px;
+      }
+    }
+  }
+  .order-info {
+    .row-flex();
+    .size(6);
+    .size-sm(12);
+    .sm-block({
+      padding-bottom: 10px;
+    });
+    .item {
+      .col();
+      .size(4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .quantity {
+      .empty {
+        position: relative;
+        &:after {
+          display: block;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: @qantity-backround;
+          position: absolute;
+          top: -25px;
+          left: 0;
+          content: "3";
+          text-align: center;
+          color: @order-text-color;
+          font-family: LatoRegular, sans-serif;
+          font-size: 1em;
+        }
+      }
+    }
+    .total-price {
+      color: @order-text-color;
+      font-family: LatoBold, sans-serif;
+      font-size: 0.875em;
+      font-weight: 700;
+      line-height: 36px;
+      text-transform: uppercase;
+
+      span {
+        font-family: LatoRegular, sans-serif;
+        font-size: 1.125em;
+        font-weight: 400;
+        margin-left: 20px;
+      }
+    }
+    .details {
+      color: @order-text-color;
+      font-family: LatoBold, sans-serif;
+      font-size: 0.875em;
+      font-weight: 700;
+      text-transform: uppercase;
+
+      &:hover {
+        border-left: 3px dashed @order-text-color;
+        border-right: 3px dashed @order-text-color;
+        .transition();
+      }
+
+      i {
+        color: @order-text-color;
+        margin-left: 20px;
+      }
+    }
+  }
+}

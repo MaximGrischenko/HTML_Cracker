@@ -1,0 +1,101 @@
+.about-cover-container {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  .cover, .empty {
+    flex-grow: 1;
+  }
+  .cover {
+    background-color: rgba(215, 191, 191, 0.74);
+  }
+  .content-wrapper {
+    padding-right: 0;
+    article {
+      .row-flex();
+      justify-content: flex-end;
+      margin-right: 0;
+      p {
+        .col();
+        .size(8);
+        .size-sm(8);
+        .sm-block({
+          text-align: start;
+        });
+        margin: 0;
+        padding: 40px 0 80px 0;
+        background-color: rgba(215, 191, 191, 0.74);
+        color: @about-text-color;
+        font-family: LatoRegular, sans-serif;
+        font-size: 1.125em;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0.36px;
+        text-align: justify;
+      }
+      .left-offset, .right-offset {
+        .col();
+        .size(1);
+        margin-right: 0;
+        background-color: rgba(215, 191, 191, 0.74);
+      }
+      .left-offset {
+        margin-right: 0;
+        position: relative;
+        &:before {
+          display: block;
+          z-index: -1;
+          content: "";
+          width: 380px;
+          height: 380px;
+          position: absolute;
+          left: -190px;
+          top: -100px;
+          background-image: url('@{image-folder}cracker.png');
+          background-position: top center;
+          background-size: cover;
+        }
+      }
+
+      .right-offset {
+        margin-left: 0;
+        position: relative;
+        &:after {
+          display: block;
+          position: absolute;
+          bottom: -22px;
+          right: 10px;
+          content: "Cracker";
+          color: @about-text-color;
+          font-family: Kristi, sans-serif;
+          font-size: 4.5em;
+          font-weight: 400;
+          font-style: italic;
+          line-height: 60.96px;
+        }
+      }
+    }
+  }
+}
+
+.about-title {
+  position: relative;
+  z-index: 2;
+  .row-flex();
+  .size(12);
+  justify-content: flex-end;
+  margin: 0 0 65px 0;
+  h1 {
+    .col();
+    .size(7);
+    .size-xs(9);
+    .xs-block({ text-align: center; left: 0; top: 30px; font-size: 2.4em;});
+    text-align: end;
+    color: @about-title-color;
+    font-family: FredokaOne, sans-serif;
+    font-size: 3em;
+    font-weight: 400;
+    line-height: 60px;
+    text-transform: uppercase;
+    letter-spacing: 9.6px;
+  }
+}
